@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+""" Display the employee TODO list progress using a REST API.
+
+Takes the employee ID as a command line argument and prints the number of tasks done over the total number of tasks of that employee followed by the title of the tasks completed.
+"""
 import requests
 import sys
 
