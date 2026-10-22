@@ -6,8 +6,6 @@ Takes the employee ID as a command line argument and prints the number of tasks 
 import requests
 import sys
 
-id = int(sys.argv[1])
-
 #Getting the tasks and the name of the employee
 URL = 'https://jsonplaceholder.typicode.com/todos/'
 URL_1 = 'https://jsonplaceholder.typicode.com/users/' 
@@ -33,6 +31,7 @@ for todo in todos:
 TOTAL_NUMBER_OF_TASKS = NUMBER_OF_DONE_TASKS + TASKS_NOT_DONE
 #printing the results in the exact following format
 if __name__ == "__main__":
+    id = int(sys.argv[1])
     print('Employee {} is done with tasks({}/{}):'.format(EMPLOYEE_NAME, NUMBER_OF_DONE_TASKS, TOTAL_NUMBER_OF_TASKS))
     for todo in todos:
         if todo['userId'] == id:
