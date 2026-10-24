@@ -26,7 +26,9 @@ if __name__ == "__main__":
             USER_ID = todo['userId']
             TASK_COMPLETED_STATUS = todo['completed']
             tasks.append({"task": TASK_TITLE, 
-                          "completed": TASK_COMPLETED_STATUS, "username": USERNAME, })
-    data = {str(USER_ID): tasks}
+                          "completed": TASK_COMPLETED_STATUS, 
+                          "username": USERNAME,
+                          })
+    data = {str(employee_id): tasks}
     with open("{}.json".format(employee_id), "w") as f:
         json.dump(data, f)
