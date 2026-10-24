@@ -2,9 +2,9 @@
 """ Export the data from the previous task in CSV format.
 """
 # ---- task 0 + new task ----
+import csv
 import requests
 import sys
-import csv
 
 if __name__ == "__main__":
     employee_id = int(sys.argv[1])
