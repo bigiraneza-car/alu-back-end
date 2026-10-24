@@ -18,14 +18,14 @@ if __name__ == "__main__":
 # Finding the name of the employee
     for name in names:
         if name['id'] == employee_id:
-            USERNAME = name['name']
+            USERNAME = name['username']
 # counting the tasks done over the total tasks and export it in a csv format
-    with open("USER_ID.csv", "w") as f:
+    with open("{}.csv".format(employee_id), "w") as f:
         for todo in todos:
             if todo['userId'] == employee_id:
                 USER_ID = todo['userId']
                 TASK_COMPLETED_STATUS = todo['completed']
                 TASK_TITLE = todo['title']
-                print('"{}", "{}", "{}", "{}"'.format(
+                print('"{}","{}","{}","{}"'.format(
                     USER_ID, USERNAME, TASK_COMPLETED_STATUS,
                     TASK_TITLE), file=f)
